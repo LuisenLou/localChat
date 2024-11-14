@@ -15,12 +15,13 @@ This project implements a simple chat application in Java using sockets. It incl
 
 ## Project Structure
 
-```plaintext
-├── src
-│   └── apps
-│       ├── Client.java        # Client source code
-│       └── Server.java        # Server source code
-└── README.md                  # Project documentation
+    ```plaintext
+    ├── src
+    │   └── apps
+    │       ├── Client.java        # Client source code
+    │       └── Server.java        # Server source code
+    └── README.md                  # Project documentation
+
 
 ## Running the Project
 
