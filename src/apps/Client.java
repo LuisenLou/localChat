@@ -14,8 +14,6 @@ import java.awt.event.ActionListener;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
 
 public class Client {
@@ -23,7 +21,6 @@ public class Client {
 	private JFrame frame;
 	private JTextField title;
 	private JTextField chatMessage;
-	private JTextArea chatPanel ;
 
 	/**
 	 * Launch the application.
@@ -66,26 +63,13 @@ public class Client {
 		title.setBounds(108, 11, 61, 20);
 		frame.getContentPane().add(title);
 		title.setColumns(10);
-		
-		//Allows scroll chat.
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBorder(new LineBorder(new Color(0, 0, 0), 2));
-		scrollPane.setBackground(new Color(0, 0, 0));
-		scrollPane.setBounds(21, 52, 242, 237);
-		frame.getContentPane().add(scrollPane);
-		
-		
-		//Chat panel.
-		chatPanel = new JTextArea();
-		chatPanel.setFont(new Font("Monospaced", Font.PLAIN, 12));
-		chatPanel.setBackground(new Color(192, 192, 192));
-		scrollPane.setViewportView(chatPanel);
+
 		
 		//Chat message 
 		chatMessage = new JTextField();
 		chatMessage.setBorder(new LineBorder(new Color(0, 0, 0), 2));
 		chatMessage.setBackground(new Color(192, 192, 192));
-		chatMessage.setBounds(10, 296, 264, 20);
+		chatMessage.setBounds(10, 50, 264, 20);
 		frame.getContentPane().add(chatMessage);
 		chatMessage.setColumns(10);
 		
@@ -98,7 +82,7 @@ public class Client {
 				chatMessage.setText("");
 			}
 		});
-		btnSendButton.setBounds(95, 329, 89, 23);
+		btnSendButton.setBounds(95, 100, 89, 23);
 		frame.getContentPane().add(btnSendButton);
 	}
 	
